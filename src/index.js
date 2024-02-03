@@ -1,17 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import FuncComp from './components/FuncComp';
+import ClassComp from './components/ClassComp';
+
+function MyApp() {
+  return (
+    <h1>Custom React</h1>
+  );
+}
+
+//Behind the scene parsing of the JSX by React
+const reactElement = React.createElement(
+  'a',
+  {
+    href: 'https://google.com', target: '_blank'
+  },
+  'Click me to Visit Google'
+)
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <>
     <App />
-  </React.StrictMode>
+    <MyApp />
+    <FuncComp />
+    <ClassComp />
+  </>
+  // reactElement
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
