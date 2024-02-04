@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import FuncComp from './components/FuncComp';
 import ClassComp from './components/ClassComp';
+import Counter from './components/Counter';
+// import './index.css'
 
 function MyApp() {
   return (
@@ -27,6 +29,7 @@ root.render(
     <MyApp />
     <FuncComp />
     <ClassComp />
+    <Counter />
   </>
   // reactElement
 );
